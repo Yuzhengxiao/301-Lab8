@@ -44,7 +44,7 @@ public class CityListTest {
     void testGetCities() {
         CityList cityList = mockCityList();
 
-        assertEquals(1, cityList.getCities().get(0));
+        assertEquals(0, cityList.getCities().get(0));
 
         City city = new City("CharLottetown", "Prince Edward Island");
         cityList.add(city);
