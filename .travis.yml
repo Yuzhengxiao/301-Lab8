@@ -43,7 +43,8 @@ before_install:
   - Yes | sdkmanager "platforms;android-$ANDROID_API_LEVEL"
 before_script:
   - chmod +x gradlew
-  - echo no | android create avd -- force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_api/$ANDROID_ABI
+  
+  - echo no | android create avd --force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_apis/$ANDROID_ABI
   - emulator -avd test -no-window &
   - android-await-form-emulator
   - adb shell input keyevent 82 & 
